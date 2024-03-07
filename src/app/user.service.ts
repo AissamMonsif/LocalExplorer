@@ -48,7 +48,8 @@ export class UserService {
 
   handle(): Observable<any> {
     let url = 'https://api.openai.com/v1/chat/completions';
-    let httpHeaders = new HttpHeaders().set("Authorization", "Bearer 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");
+    let httpHeaders = new HttpHeaders().set("Authorization", "Bearer YOUR_OPENAI_API_KEY");
+    //let httpHeaders = new HttpHeaders().set("Authorization", "Bearer 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");
     let payload = {
       model: "gpt-3.5-turbo",
       messages: this.messages
